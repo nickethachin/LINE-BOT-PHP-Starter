@@ -10,19 +10,26 @@ $strUrl = "https://api.line.me/v2/bot/message/reply";
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
+
+if($arrJson['events'][0]['message']['text'] == "bot help"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "nigbot v0.03.03\n\ncode โชว์โค้ดที่ยังใช้ได้\nuser แสดงรายชื่อผู้เล่นที่เข้าไลน์แล้ว";
+}
  
-if($arrJson['events'][0]['message']['text'] == "bot myid"){
+else if($arrJson['events'][0]['message']['text'] == "bot myid"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = $arrJson['events'][0]['source']['userId'];
 }
 
-else if($arrJson['events'][0]['message']['text'] == "bot whoru"){
+else if($arrJson['events'][0]['message']['text'] == "nigbot นายเป็นใคร"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "I'm personal Nig's bot";
+  $arrPostData['messages'][0]['text'] = "ระบบตอบกลับอัตโนมัติ สำหรับจัดเก็บข้อมูลทั่วไปส่วนตัว ถูกเขียนโดยนิก";
 }
 
 else if($arrJson['events'][0]['message']['text'] == "bot code"){
@@ -32,13 +39,6 @@ else if($arrJson['events'][0]['message']['text'] == "bot code"){
   $arrPostData['messages'][0]['text'] = "วิธีใส่โค้ดนะครับ\n1.) กดเปลี่ยนชื่อ\n2.) ใส่โค้ด\n3.) กดเช็คชื่อ\n*ระวังอย่าเผลอกดเปลี่ยนชื่อนะครับ*";
   $arrPostData['messages'][1]['type'] = "text";
   $arrPostData['messages'][1]['text'] = "โค้ดที่ยังใช้ได้ (20/12/2560)\n##street\n##gangster\n##train";
-}
-
-else if($arrJson['events'][0]['message']['text'] == "bot help"){
-  $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "nigbot v0.03.02\n\ncode โชว์โค้ดที่ยังใช้ได้\nuser แสดงรายชื่อผู้เล่นที่เข้าไลน์แล้ว";
 }
 
 else if($arrJson['events'][0]['message']['text'] == "bot user"){
@@ -53,6 +53,24 @@ else if($arrJson['events'][0]['message']['text'] == "bot user"){
   Line : Ton\nชื่อในเกม : ขาดำ\nชื่อเล่น : ต้น\n\n
   Line : เต้ย\nชื่อในเกม : DGTH\nชื่อเล่น : เต้ย\n\n
   ";
+}
+
+else if($arrJson['events'][0]['message']['text'] == "ขอข้อมูลแพร"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "นางสาวแพรพรรณ เสลาคุณ 805 บ้านทิพย์เพลส ซอยจรัญสนิทวงศ์ 65 แยก 21 เขต บางพลัด แขวง บางบำหรุ กรุงเทพ 10700 โทร 0823764744";
+  $arrPostData['messages'][1]['type'] = "text";
+  $arrPostData['messages'][1]['text'] = "นางสาวแพรพรรณ เสลาคุณ ธนาคารกรุงศรีอยุธยา 394 1 18446 0";
+}
+
+else if($arrJson['events'][0]['message']['text'] == "ขอข้อมูลนิก"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "นายธชิณ วิสุทธิมรรคกุล 231-232 (204) BKแมนชั่น ม.5 ต.บ้านกร่าง อ.เมือง จ.พิษณุโลก 65000 โทร 0836222054";
+  $arrPostData['messages'][1]['type'] = "text";
+  $arrPostData['messages'][1]['text'] = "นายธชิณ วิสุทธิมรรคกุล ธนาคารกสิกรไทย 393 255 3324";
 }
  
  
