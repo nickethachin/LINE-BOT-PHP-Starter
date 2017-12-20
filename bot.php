@@ -29,16 +29,16 @@ else if($arrJson['events'][0]['message']['text'] == "bot code"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "โค้ดที่ยังใช้ได้ (20/12/2560)\n##street\n##gangster\n##train";
+  $arrPostData['messages'][0]['text'] = "วิธีใส่โค้ดนะครับ\n1.) กดเปลี่ยนชื่อ\n2.) ใส่โค้ด\n3.) กดเช็คชื่อ\n*ระวังอย่าเผลอกดเปลี่ยนชื่อนะครับ*";
   $arrPostData['messages'][1]['type'] = "text";
-  $arrPostData['messages'][1]['text'] = "วิธีใส่โค้ดนะครับ\n1.) กดเปลี่ยนชื่อ\n2.) ใส่โค้ด\n3.) กดเช็คชื่อ\n*ระวังอย่าเผลอกดเปลี่ยนชื่อนะครับ*";
+  $arrPostData['messages'][1]['text'] = "โค้ดที่ยังใช้ได้ (20/12/2560)\n##street\n##gangster\n##train";
 }
 
 else if($arrJson['events'][0]['message']['text'] == "bot help"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "nigbot v0.02.08\n\ncode โชว์โค้ดที่ยังใช้ได้";
+  $arrPostData['messages'][0]['text'] = "nigbot v0.02.09\n\ncode โชว์โค้ดที่ยังใช้ได้";
 }
  
  
