@@ -11,32 +11,32 @@ $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
  
-if($arrJson['events'][0]['message']['text'] == "@myid"){
+if($arrJson['events'][0]['message']['text'] == "!myid"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = $arrJson['events'][0]['source']['userId'];
 }
 
-else if($arrJson['events'][0]['message']['text'] == "@whoru"){
+else if($arrJson['events'][0]['message']['text'] == "!whoru"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "I'm personal Nig's bot";
 }
 
-else if($arrJson['events'][0]['message']['text'] == "@code"){
+else if($arrJson['events'][0]['message']['text'] == "!code"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "โค้ดที่ยังใช้ได้ (20/12/2560)""\n""##street""\n""##gangster""\n""##train";
 }
 
-else if($arrJson['events'][0]['message']['text'] == "@help"){
+else if($arrJson['events'][0]['message']['text'] == "!help"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "@code โชว์โค้ดที่ยังใช้ได้""\n";
+  $arrPostData['messages'][0]['text'] = "!code โชว์โค้ดที่ยังใช้ได้""\n";
 }
  
  
