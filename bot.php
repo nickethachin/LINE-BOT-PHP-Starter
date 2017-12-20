@@ -37,7 +37,7 @@ else if($arrJson['events'][0]['message']['text'] == "bot help"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "code โชว์โค้ดที่ยังใช้ได้";
+  $arrPostData['messages'][0]['text'] = "nigbot v0.02.07\n\ncode โชว์โค้ดที่ยังใช้ได้";
 }
  
  
