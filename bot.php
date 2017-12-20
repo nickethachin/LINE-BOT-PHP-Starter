@@ -38,7 +38,7 @@ else if($arrJson['events'][0]['message']['text'] == "bot help"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "nigbot v0.03.00\n\ncode โชว์โค้ดที่ยังใช้ได้";
+  $arrPostData['messages'][0]['text'] = "nigbot v0.03.02\n\ncode โชว์โค้ดที่ยังใช้ได้\nuser แสดงรายชื่อผู้เล่นที่เข้าไลน์แล้ว";
 }
 
 else if($arrJson['events'][0]['message']['text'] == "bot user"){
