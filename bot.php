@@ -40,6 +40,20 @@ else if($arrJson['events'][0]['message']['text'] == "bot help"){
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "nigbot v0.02.09\n\ncode โชว์โค้ดที่ยังใช้ได้";
 }
+
+else if($arrJson['events'][0]['message']['text'] == "bot user"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "
+  Line : Bright I-Din\nชื่อในเกม : zREMOEOz\nชื่อเล่น : ไบร์ท\n\n
+  Line : > Best <\nชื่อในเกม : BzForest\nชื่อเล่น : เบสท์\n\n
+  Line : Garfield\nชื่อในเกม : การ์ตูน\nชื่อเล่น : ?\n\n
+  Line : nnicke\nชื่อในเกม : Avas\nชื่อเล่น : นิก\n\n
+  Line : Ton\nชื่อในเกม : ขาดำ\nชื่อเล่น : ต้น\n\n
+  Line : เต้ย\nชื่อในเกม : DGTH\nชื่อเล่น : เต้ย\n\n
+  ";
+}
  
  
 $ch = curl_init();
