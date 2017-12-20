@@ -16,17 +16,11 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
-			// Build message to reply back
-			$messages = [
-				'type' => 'text',
-				'text' => $text
-            ];
-
             if($text=='!code'){
                 $replytext = '##street ## gangster ##train';
                 $messages = [
                     'type' => 'text',
-                    'text' => '##street ##gangster ##train'
+                    'text' => $replytext
                 ];
             };
 
