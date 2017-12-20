@@ -17,10 +17,10 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
             if($text=='!code'){
-                $replytext = '##street ## gangster ##train';
                 $messages = [
                     'type' => 'text',
-                    'text' => $replytext
+                    'text' => 'วิธีใส่โค้ดนะครับ\n1.) กดเปลี่ยนชื่อ\n2.) ใส่โค็ดลงในช่องเปลี่ยนชื่อ\n3.) กดเช็คเฉยๆ ไม่ต้องกดเปลี่ยนชื่อ\n*ถ้าเผลอกดเปลี่ยนชื่อระวังเสียเพชรฟรีนะครับ*',
+                    'text' => 'โค้ดที่ใช้ได้ในปัจจุบันมี 3 โค้ด\n##street\n##gangster\n##train'
                 ];
             };
 
