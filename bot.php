@@ -23,9 +23,11 @@ if (!is_null($events['events'])) {
             ];
 
             if($text=='!code'){
+                $replytext = '##street ## gangster ##train';
                 $messages = [
                     'type' => 'text',
                     'text' => '##street ##gangster ##train'
+                ];
             };
 
 			// Make a POST Request to Messaging API to reply to sender
