@@ -15,7 +15,7 @@ if($arrJson['events'][0]['message']['text'] == "bot help"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "nigbot v0.03.05\n\ncode โชว์โค้ดที่ยังใช้ได้\nuser แสดงรายชื่อผู้เล่นที่เข้าไลน์แล้ว";
+  $arrPostData['messages'][0]['text'] = "nigbot v0.03.05";
 }
  
 else if($arrJson['events'][0]['message']['text'] == "bot myid"){
@@ -25,34 +25,11 @@ else if($arrJson['events'][0]['message']['text'] == "bot myid"){
   $arrPostData['messages'][0]['text'] = $arrJson['events'][0]['source']['userId'];
 }
 
-else if($arrJson['events'][0]['message']['text'] == "nigbot นายเป็นใคร"){
+else if($arrJson['events'][0]['message']['text'] == "nigbot นี่ใคร"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "ระบบตอบกลับอัตโนมัติ สำหรับจัดเก็บข้อมูลทั่วไปส่วนตัว ถูกเขียนโดยนิก";
-}
-
-else if($arrJson['events'][0]['message']['text'] == "bot code"){
-  $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "วิธีใส่โค้ดนะครับ\n1.) กดเปลี่ยนชื่อ\n2.) ใส่โค้ด\n3.) กดเช็คชื่อ\n*ระวังอย่าเผลอกดเปลี่ยนชื่อนะครับ*";
-  $arrPostData['messages'][1]['type'] = "text";
-  $arrPostData['messages'][1]['text'] = "โค้ดที่ยังใช้ได้ (20/12/2560)\n##street\n##gangster\n##train";
-}
-
-else if($arrJson['events'][0]['message']['text'] == "bot user"){
-  $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "
-  Line : Bright I-Din\nชื่อในเกม : zREMOEOz\nชื่อเล่น : ไบร์ท\n\n
-  Line : > Best <\nชื่อในเกม : BzForest\nชื่อเล่น : เบสท์\n\n
-  Line : Garfield\nชื่อในเกม : การ์ตูน\nชื่อเล่น : ?\n\n
-  Line : nnicke\nชื่อในเกม : Avas\nชื่อเล่น : นิก\n\n
-  Line : Ton\nชื่อในเกม : ขาดำ\nชื่อเล่น : ต้น\n\n
-  Line : เต้ย\nชื่อในเกม : DGTH\nชื่อเล่น : เต้ย\n\n
-  ";
 }
 
 else if($arrJson['events'][0]['message']['text'] == "ขอข้อมูลแพร"){
