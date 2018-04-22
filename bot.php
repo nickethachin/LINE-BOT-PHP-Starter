@@ -15,7 +15,7 @@ if($arrJson['events'][0]['message']['text'] == "bot help"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "nigbot v0.04b";
+  $arrPostData['messages'][0]['text'] = "nigbot v0.05";
 }
  
 else if($arrJson['events'][0]['message']['text'] == "bot myid"){
@@ -52,9 +52,10 @@ else if($arrJson['events'][0]['message']['text'] == "ขอข้อมูลน
   $arrPostData['messages'][2]['text'] = "นายธชิณ วิสุทธิมรรคกุล ธนาคารกสิกรไทย 393 255 3324";
 }
 
-else if($arrJson['events'][0]['message']['text'] == "กี่โมงละ"){
+else if($arrJson['events'][0]['message']['text'] == "nrpg timer"){
   $utc = strtotime("now");
   $thai = strtotime("+7 hours");
+  $frog = strtotime("+7 hours 20 minutes");
   $door = strtotime("+7 hours 45 minutes");
   $hawk = strtotime("+8 hours 30 minutes");
   $slug = strtotime("+8 hours 40 minutes");
@@ -65,7 +66,17 @@ else if($arrJson['events'][0]['message']['text'] == "กี่โมงละ"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "เวลา UTC คือ " .date("H:i:s",$utc)."\nเวลาไทยคือ ".date("H:i:s",$thai);
+  $arrPostData['messages'][0]['text'] = "เวลาเซิฟเปิด\nเวลา UTC คือ " .date("H:i:s",$utc)."\nเวลาไทยคือ ".date("H:i:s",$thai);
+  $arrPostData['messages'][1]['type'] = "text";
+  $arrPostData['messages'][1]['text'] = 
+  "ประตูกัญชา - ".date("H:i:s",$door).
+  "\nกบ - ".date("H:i:s",$frog).
+  "\nเหยี่ยว - ".date("H:i:s",$hawk)." เก็บได้หลายคน".
+  "\nทาก - ".date("H:i:s",$slug).
+  "\nฮิดัน - ".date("H:i:s",$trap)." ต้องใช้ Gamepass".
+  "\nโอโรจิ - ".date("H:i:s",$curse).
+  "\nงู - ".date("H:i:s",$snake)." เก็บได้หลายคน".
+  "\nกาอาระ - ".date("H:i:s",$gaara);
 }
  
 $ch = curl_init();
