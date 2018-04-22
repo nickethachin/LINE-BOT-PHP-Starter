@@ -15,7 +15,7 @@ if($arrJson['events'][0]['message']['text'] == "bot help"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "nigbot v0.03.03\n\ncode โชว์โค้ดที่ยังใช้ได้\nuser แสดงรายชื่อผู้เล่นที่เข้าไลน์แล้ว";
+  $arrPostData['messages'][0]['text'] = "nigbot v0.03.04\n\ncode โชว์โค้ดที่ยังใช้ได้\nuser แสดงรายชื่อผู้เล่นที่เข้าไลน์แล้ว";
 }
  
 else if($arrJson['events'][0]['message']['text'] == "bot myid"){
@@ -74,7 +74,13 @@ else if($arrJson['events'][0]['message']['text'] == "ขอข้อมูลน
   $arrPostData['messages'][2]['type'] = "text";
   $arrPostData['messages'][2]['text'] = "นายธชิณ วิสุทธิมรรคกุล ธนาคารกสิกรไทย 393 255 3324";
 }
- 
+
+else if($arrJson['events'][0]['message']['text'] == "กี่โมงละ"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "The time is " . date("H:i:s");
+}
  
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,$strUrl);
