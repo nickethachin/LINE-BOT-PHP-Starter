@@ -57,7 +57,7 @@ else if($arrJson['events'][0]['message']['text'] == "กี่โมงละ"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "เวลา UTC คือ " .strtotime("now")."\nเวลาไทยคือ ".strtotime("+7 hours");
+  $arrPostData['messages'][0]['text'] = "เวลา UTC คือ " .strtotime("time,now")."\nเวลาไทยคือ ".strtotime("time,+7 hours");
 }
  
 $ch = curl_init();
