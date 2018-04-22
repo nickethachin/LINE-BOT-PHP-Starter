@@ -9,7 +9,7 @@ $strUrl = "https://api.line.me/v2/bot/message/reply";
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
-$heroku config:add TZ="Etc/GMT+7"
+//$heroku config:add TZ="Etc/GMT+7"
 
 if($arrJson['events'][0]['message']['text'] == "bot help"){
   $arrPostData = array();
