@@ -70,9 +70,9 @@ else if($arrJson['events'][0]['message']['text'] == "ขอข้อมูลน
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "นายธชิณ วิสุทธิมรรคกุล 231-232 (204) BKแมนชั่น ม.5 ต.บ้านกร่าง อ.เมือง จ.พิษณุโลก 65000 โทร 0836222054";
   $arrPostData['messages'][1]['type'] = "text";
-  $arrPostData['messages'][1]['text'] = "นายธชิณ วิสุทธิมรรคกุล ธนาคารกสิกรไทย 393 255 3324";
+  $arrPostData['messages'][1]['text'] = "นายธชิณ วิสุทธิมรรคกุล 148 ม.4 ตำบลเนินเพิ่ม อ.นครไทย จ.พิษณุโลก 65120 โทร 0836222054";
   $arrPostData['messages'][2]['type'] = "text";
-  $arrPostData['messages'][2]['text'] = "ทดสอบอัพเดท";
+  $arrPostData['messages'][2]['text'] = "นายธชิณ วิสุทธิมรรคกุล ธนาคารกสิกรไทย 393 255 3324";
 }
  
  
