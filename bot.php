@@ -15,7 +15,7 @@ if($arrJson['events'][0]['message']['text'] == "bot help"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "nigbot v0.03.05";
+  $arrPostData['messages'][0]['text'] = "nigbot v0.04.00";
 }
  
 else if($arrJson['events'][0]['message']['text'] == "bot myid"){
@@ -53,10 +53,11 @@ else if($arrJson['events'][0]['message']['text'] == "ขอข้อมูลน
 }
 
 else if($arrJson['events'][0]['message']['text'] == "กี่โมงละ"){
+  $now = date("H:i:s");
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "The time is " . date("H:i:s");
+  $arrPostData['messages'][0]['text'] = "เวลา UTC คือ " .strtotime("now")."\nเวลาไทยคือ ".strtotime("+7 hours");
 }
  
 $ch = curl_init();
