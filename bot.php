@@ -1,5 +1,4 @@
 <?php
- 
 $strAccessToken = "kXXzJ4XLZiWRFdUWsDE4NyRYZgCKOB87Ojp564pJzYm6TH0H6pFvctA+XLqv4g15BMYBahaKHtnjIp6sovWaPPxOL06fPsyyLuXaW577BvQVVtkePiATciJ8nXalao65DOG978SCxt2OYqpZL4j3IwdB04t89/1O/w1cDnyilFU=";
  
 $content = file_get_contents('php://input');
@@ -10,12 +9,13 @@ $strUrl = "https://api.line.me/v2/bot/message/reply";
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
+$heroku config:add TZ="Etc/GMT+7"
 
 if($arrJson['events'][0]['message']['text'] == "bot help"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "nigbot v0.03.04\n\ncode โชว์โค้ดที่ยังใช้ได้\nuser แสดงรายชื่อผู้เล่นที่เข้าไลน์แล้ว";
+  $arrPostData['messages'][0]['text'] = "nigbot v0.03.05\n\ncode โชว์โค้ดที่ยังใช้ได้\nuser แสดงรายชื่อผู้เล่นที่เข้าไลน์แล้ว";
 }
  
 else if($arrJson['events'][0]['message']['text'] == "bot myid"){
