@@ -9,13 +9,13 @@ $strUrl = "https://api.line.me/v2/bot/message/reply";
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
-$ heroku config:add TZ="Etc/GMT+7"
+//$ heroku config:add TZ="Etc/GMT+7"
 
 if($arrJson['events'][0]['message']['text'] == "bot help"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "nigbot v0.05b";
+  $arrPostData['messages'][0]['text'] = "nigbot v0.05c";
 }
  
 else if($arrJson['events'][0]['message']['text'] == "bot myid"){
