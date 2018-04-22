@@ -9,13 +9,13 @@ $strUrl = "https://api.line.me/v2/bot/message/reply";
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
-//$heroku config:add TZ="Etc/GMT+7"
+$ heroku config:add TZ="Etc/GMT+7"
 
 if($arrJson['events'][0]['message']['text'] == "bot help"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "nigbot v0.05";
+  $arrPostData['messages'][0]['text'] = "nigbot v0.05b";
 }
  
 else if($arrJson['events'][0]['message']['text'] == "bot myid"){
@@ -66,17 +66,17 @@ else if($arrJson['events'][0]['message']['text'] == "nrpg timer"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "เวลาเซิฟเปิด\nเวลา UTC คือ " .date("H:i:s",$utc)."\nเวลาไทยคือ ".date("H:i:s",$thai);
+  $arrPostData['messages'][0]['text'] = "เวลาเซิฟเปิด\nเวลา UTC คือ " .date("H:i:s",$utc)."\nเวลาไทยคือ ".date("H:i",$thai);
   $arrPostData['messages'][1]['type'] = "text";
   $arrPostData['messages'][1]['text'] = 
-  "ประตูกัญชา - ".date("H:i:s",$door).
-  "\nกบ - ".date("H:i:s",$frog).
-  "\nเหยี่ยว - ".date("H:i:s",$hawk)." เก็บได้หลายคน".
-  "\nทาก - ".date("H:i:s",$slug).
-  "\nฮิดัน - ".date("H:i:s",$trap)." ต้องใช้ Gamepass".
-  "\nโอโรจิ - ".date("H:i:s",$curse).
-  "\nงู - ".date("H:i:s",$snake)." เก็บได้หลายคน".
-  "\nกาอาระ - ".date("H:i:s",$gaara);
+  "ประตูกัญชา - ".date("H:i",$door).
+  "\nกบ - ".date("H:i",$frog).
+  "\nเหยี่ยว - ".date("H:i",$hawk)." เก็บได้หลายคน".
+  "\nทาก - ".date("H:i",$slug).
+  "\nฮิดัน - ".date("H:i",$trap)." ต้องใช้ Gamepass".
+  "\nโอโรจิ - ".date("H:i",$curse).
+  "\nงู - ".date("H:i",$snake)." เก็บได้หลายคน".
+  "\nกาอาระ - ".date("H:i",$gaara);
 }
  
 $ch = curl_init();
